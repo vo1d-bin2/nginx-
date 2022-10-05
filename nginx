@@ -1,1 +1,16 @@
 #nginx-config
+server {
+    #if ($host = mediaserver.vo1d.cf) {
+    #    return 301 https://mediaserver.vo1d.cf:5443$request_uri;
+       
+    #} # managed by Certbot
+    #location /route {
+    #proxy_pass https://mediaserver.vo1d.cf:5443;
+    #}
+
+        listen 80 ;
+        listen [::]:80 ;
+    server_name vpn.vo1d.cf;
+    return 301 https://vpn.vo1d.cf;
+	return 404; # managed by Certbot
+}
